@@ -38,6 +38,13 @@ const App = () => {
 
   console.log(now, a + b)
 
+
+  //rendering objects
+  const friends = [
+    {name:'Peter', age:41},
+    {name: 'Steve',age:85},
+  ]
+
   return (
     <>
       <div>
@@ -66,6 +73,11 @@ const App = () => {
       </p>
       <h3>Greetings</h3>
       <Hello fname="Mlondi" lname="Mchunu" age = "29"  des = {desi}/>
+
+      <div>
+        <p>{friends[0].name}{friends[1].age}</p>
+        <p>{friends[1].age}</p>
+      </div>
       
     </>
   )
