@@ -5,6 +5,7 @@ import './App.css'
 
 const Hello = (props) => {
   console.log(props)
+
   return (
     <>
       <div>
@@ -14,6 +15,9 @@ const Hello = (props) => {
           Last Name : {props.lname}
           <br/>
           Age : {props.age}
+          <br/>
+          Designation : {props.des}
+
         </p>
       </div>
     </>
@@ -29,6 +33,8 @@ const App = () => {
 
   const a = 10
   const b = 20
+
+  const desi = 'Software Dev'
 
   console.log(now, a + b)
 
@@ -59,7 +65,7 @@ const App = () => {
         Click on the Vite and React logos to learn more
       </p>
       <h3>Greetings</h3>
-      <Hello fname="Mlondi" lname="Mchunu" age = "29"/>
+      <Hello fname="Mlondi" lname="Mchunu" age = "29"  des = {desi}/>
       
     </>
   )
