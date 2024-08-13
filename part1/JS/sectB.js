@@ -33,3 +33,11 @@ const z = [4,8,2]
 const z1 = z.map((value)=>'<li>'+value * 2+'</li>')
 
 console.log(z1)
+
+//destructuring assignment
+const t1 = [1,2,3,4,5,6,7,8]
+
+const[first,second,third,...rest] = t1
+
+console.log(second)
+
