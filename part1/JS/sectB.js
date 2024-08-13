@@ -67,3 +67,8 @@ const obj3 = {
 
 console.log(obj3)
 console.log(obj1.name)
+
+obj1.address = "Wendywood"
+obj1['secret number'] = 12341
+
+console.log(obj1)
