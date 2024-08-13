@@ -3,12 +3,12 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-const Hello = () => {
+const Hello = (props) => {
 
   return (
     <>
       <div>
-        <p>Hello World</p>
+        <p>Hello {props.name}</p>
       </div>
     </>
   )
@@ -53,7 +53,8 @@ const App = () => {
         Click on the Vite and React logos to learn more
       </p>
       <h3>Greetings</h3>
-      <Hello />
+      <Hello name="Mlondi"/>
+      <Hello name="Jeffrey"/>
     </>
   )
 }
