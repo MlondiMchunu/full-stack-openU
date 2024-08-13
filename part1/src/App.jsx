@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 const Hello = (props) => {
-
+  console.log(props)
   return (
     <>
       <div>
@@ -12,6 +12,8 @@ const Hello = (props) => {
           First Name : {props.fname} 
           <br/>
           Last Name : {props.lname}
+          <br/>
+          Age : {props.age}
         </p>
       </div>
     </>
@@ -57,7 +59,7 @@ const App = () => {
         Click on the Vite and React logos to learn more
       </p>
       <h3>Greetings</h3>
-      <Hello fname="Mlondi" lname="Mchunu"/>
+      <Hello fname="Mlondi" lname="Mchunu" age = "29"/>
       
     </>
   )
