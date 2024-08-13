@@ -66,3 +66,4 @@ const obj3 = {
 }
 
 console.log(obj3)
+console.log(obj1.name)
