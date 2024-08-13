@@ -30,6 +30,6 @@ t.forEach(value => {
 
 const z = [4,8,2]
 
-const z1 = z.map((value)=>value * 2)
+const z1 = z.map((value)=>'<li>'+value * 2+'</li>')
 
 console.log(z1)
