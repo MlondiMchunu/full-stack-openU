@@ -3,6 +3,17 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+const Hello = () => {
+
+  return (
+    <>
+      <div>
+        <p>Hello World</p>
+      </div>
+    </>
+  )
+}
+
 const App = () => {
   const [count, setCount] = useState(0)
 
@@ -41,6 +52,8 @@ const App = () => {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <h3>Greetings</h3>
+      <Hello />
     </>
   )
 }
