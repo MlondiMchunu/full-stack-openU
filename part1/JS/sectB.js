@@ -65,3 +65,4 @@ const obj3 = {
     dept:'SPPU',
 }
 
+console.log(obj3)
