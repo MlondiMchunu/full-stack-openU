@@ -7,6 +7,14 @@ const App = () => {
   const [count, setCount] = useState(0)
 
   console.log("Hello from Component!!");
+
+  const now = new Date()
+
+  const a = 10
+  const b = 20
+
+  console.log(now, a + b)
+
   return (
     <>
       <div>
@@ -19,7 +27,8 @@ const App = () => {
       </div>
       <h1>Vite + React</h1>
       <div>
-        <p>Hello New World!!</p>
+        <p>Hello New World!! It is {now.toString()}</p>
+        <p> {a} plus {b} is {a + b} </p>
       </div>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
