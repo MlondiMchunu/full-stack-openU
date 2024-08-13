@@ -64,3 +64,4 @@ const obj3 = {
     grades: [2,3,5,3],
     dept:'SPPU',
 }
+
