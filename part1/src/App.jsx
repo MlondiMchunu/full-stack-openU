@@ -8,7 +8,11 @@ const Hello = (props) => {
   return (
     <>
       <div>
-        <p>Hello {props.name}</p>
+        <p>
+          First Name : {props.fname} 
+          <br/>
+          Last Name : {props.lname}
+        </p>
       </div>
     </>
   )
@@ -53,8 +57,8 @@ const App = () => {
         Click on the Vite and React logos to learn more
       </p>
       <h3>Greetings</h3>
-      <Hello name="Mlondi"/>
-      <Hello name="Jeffrey"/>
+      <Hello fname="Mlondi" lname="Mchunu"/>
+      
     </>
   )
 }
