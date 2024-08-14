@@ -32,7 +32,8 @@ function App() {
 
 const Car = (props) => {
 
-  /* guesses yr of manufacture*/
+  /* Helper function to 
+  guess yr of manufacture*/
   const manufactureYear = () => {
     const yearNow = new Date().getFullYear()
     return yearNow - props.year
