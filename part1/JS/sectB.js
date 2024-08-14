@@ -72,3 +72,16 @@ obj1.address = "Wendywood"
 obj1['secret number'] = 12341
 
 console.log(obj1)
+
+
+/*Functions*/
+
+const sum =(num1,num2)=>{
+    console.log("Numbers : ",num1," & ", num2)
+    
+
+    return num1 + num2
+}
+
+const result = sum(4,9)
+console.log("The sum of two numbers: ",result)
