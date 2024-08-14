@@ -41,6 +41,7 @@ const Car = (props) => {
     <>
       <div>
         <p>Model: {props.model} '<br />' Year: {props.year}</p>
+        <p>The car is {manufactureYear} years old.</p>
       </div>
     </>
   )
