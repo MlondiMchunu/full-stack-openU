@@ -1,19 +1,19 @@
-const App =()=>{
-    return(
+const App = () => {
+    return (
         <>
-        <div>
+            <div>
 
-        </div>
+            </div>
         </>
     )
 }
 
-const Hello = (props)=>{
-    return(
+const Car = (props) => {
+    return (
         <>
-        <div>
-            <p>Hello {props.name}, you are {props.age} years old</p>
-        </div>
+            <div>
+                <p>Model: {props.model} '<br />' Year: {props.year}</p>
+            </div>
         </>
     )
 }
