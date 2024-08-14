@@ -1,4 +1,6 @@
 const App = () => {
+    const model = "Lambo"
+    const year = 2023
     return (
         <>
             <div>
