@@ -85,3 +85,10 @@ const sum =(num1,num2)=>{
 
 const result = sum(4,9)
 console.log("The sum of two numbers: ",result)
+
+const square = num1 =>{
+    return num1 * num1
+}
+
+const res = square(7)
+console.log("Square of number : ",res)
