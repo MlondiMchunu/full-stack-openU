@@ -124,3 +124,6 @@ class Car{
 
 const sedan = new Car("Toyota",2024)
 sedan.show();
+
+const bakkie = new Car("Isuzu",2008)
+bakkie.show()
