@@ -109,3 +109,18 @@ const arto = {
 }
 
 arto.greet();
+
+/*Classes*/
+
+class Car{
+    constructor(model,year){
+        this.model = model
+        this.year = year
+    }
+    show(){
+        console.log("The "+ this.model+" is from "+this.year)
+    }
+}
+
+const sedan = new Car("Toyota",2024)
+sedan.drive();
