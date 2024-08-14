@@ -4,7 +4,9 @@ const App = () => {
     return (
         <>
             <div>
-
+                <h1> Car Stock</h1>
+                <Car model="Porsche" year={2022} />
+                <Car model={model} year={year}/>
             </div>
         </>
     )
