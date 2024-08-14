@@ -95,3 +95,17 @@ console.log("Square of number : ", res)
 
 const arr = [3, 6, 8, 2, 5]
 const arrSquare = arr.map(t => t * t)
+
+
+/*Object methods and "this"*/
+
+const arto = {
+    name:"INdiana Jones",
+    age:72,
+    education:"Master's",
+    greet:function(){
+        console.log('Hello, my name is ',this.name)
+    },
+}
+
+arto.greet();
