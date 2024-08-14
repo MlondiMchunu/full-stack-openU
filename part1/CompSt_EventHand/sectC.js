@@ -6,13 +6,17 @@ const App = () => {
             <div>
                 <h1> Car Stock</h1>
                 <Car model="Porsche" year={2022} />
-                <Car model={model} year={year}/>
+                <Car model={model} year={year} />
             </div>
         </>
     )
 }
 
 const Car = (props) => {
+    const manufactureYear =()=>{
+        const yearNow = new Date().getFullYear()
+        return yearNow - props.age
+    }
     return (
         <>
             <div>
