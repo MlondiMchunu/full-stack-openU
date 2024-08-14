@@ -31,6 +31,8 @@ function App() {
 }
 
 const Car = (props) => {
+
+  /* guesses yr of manufacture*/
   const manufactureYear = () => {
     const yearNow = new Date().getFullYear()
     return yearNow - props.age
