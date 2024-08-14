@@ -57,12 +57,12 @@ const obj2 = {
 }
 
 const obj3 = {
-    names:{
-        first:'Hector',
-        last:'Bellerin',
+    names: {
+        first: 'Hector',
+        last: 'Bellerin',
     },
-    grades: [2,3,5,3],
-    dept:'SPPU',
+    grades: [2, 3, 5, 3],
+    dept: 'SPPU',
 }
 
 console.log(obj3)
@@ -76,19 +76,22 @@ console.log(obj1)
 
 /*Functions*/
 
-const sum =(num1,num2)=>{
-    console.log("Numbers : ",num1," & ", num2)
-    
+const sum = (num1, num2) => {
+    console.log("Numbers : ", num1, " & ", num2)
+
 
     return num1 + num2
 }
 
-const result = sum(4,9)
-console.log("The sum of two numbers: ",result)
+const result = sum(4, 9)
+console.log("The sum of two numbers: ", result)
 
-const square = num1 =>{
+const square = num1 => {
     return num1 * num1
 }
 
 const res = square(7)
-console.log("Square of number : ",res)
+console.log("Square of number : ", res)
+
+const arr = [3, 6, 8, 2, 5]
+const arrSquare = arr.map(t => t * t)
