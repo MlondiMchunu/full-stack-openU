@@ -123,4 +123,4 @@ class Car{
 }
 
 const sedan = new Car("Toyota",2024)
-sedan.drive();
+sedan.show();
