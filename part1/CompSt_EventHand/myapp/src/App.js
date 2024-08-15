@@ -1,12 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
-//import './main'
 
-function App(props) {
+const App = (props)=> {
   const model = "Lambo"
   const year = 1970
 
   const {counter} = props
+  
   return (
     <div className="App">
       <header className="App-header">
