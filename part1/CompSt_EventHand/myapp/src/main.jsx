@@ -19,3 +19,9 @@ const refresh = () => {
     </StrictMode>
   )
 }
+
+refresh()
+counter +=1
+refresh()
+counter +=1
+refresh()
