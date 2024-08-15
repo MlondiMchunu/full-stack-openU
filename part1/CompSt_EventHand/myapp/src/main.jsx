@@ -20,15 +20,14 @@ const refresh = () => {
   )
 }
 
-setInterval(()=>{
+setInterval(() => {
   refresh()
   counter += 1
-},1000)
+  refresh()
+  counter += 1
+  refresh()
+}, 1000)
 
 
-refresh()
-counter +=1
-refresh()
-counter +=1
-refresh()
+
 
