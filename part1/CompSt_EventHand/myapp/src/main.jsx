@@ -25,9 +25,16 @@ const refresh = () => {
 setInterval(() => {
   refresh()
   counter += 1
+}, 3000)
+
+setInterval(() => {
   refresh()
   counter += 1
+}, 3000)
+
+setInterval(() => {
   refresh()
+  counter += 1
 }, 3000)
 
 
