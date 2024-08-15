@@ -6,7 +6,7 @@ const App = (props)=> {
   const year = 1970
 
   const {counter} = props
-  
+
   return (
     <div className="App">
       <header className="App-header">
