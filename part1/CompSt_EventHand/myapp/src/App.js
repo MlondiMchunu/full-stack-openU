@@ -37,6 +37,9 @@ const Car = (props) => {
   const manufactureYear = () => {
     const yearNow = new Date().getFullYear()
     return yearNow - props.year
+
+    /*Destructuring*/
+    const {model, year} = props
   }
   return (
     <>
