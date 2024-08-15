@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 
-const App = (props)=> {
+const App = (props) => {
   const model = "Lambo"
   const year = 1970
 
-  const {counter} = props
+  const { counter } = props
 
   return (
     <div className="App">
