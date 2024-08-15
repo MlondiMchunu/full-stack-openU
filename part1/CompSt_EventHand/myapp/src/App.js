@@ -1,9 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App () {
+function App(props) {
   const model = "Lambo"
   const year = 1970
+
+  const {counter} = props
   return (
     <div className="App">
       <header className="App-header">
@@ -26,6 +28,9 @@ function App () {
         <Car model="Porsche" year={2022} />
         <Car model={model} year={year} />
       </div>
+      <div>
+        {counter}
+      </div>
     </div>
   );
 }
@@ -36,15 +41,15 @@ const Car = (props) => {
   guess yr of manufacture*/
   const manufactureYear = () => {
     const yearNow = new Date().getFullYear()
-    return yearNow - props.year 
+    return yearNow - props.year
   }
 
   //Destructuring
-    const {model, year} = props
+  const { model, year } = props
   return (
     <>
       <div>
-        <p>Model: {props.model} <br/> Year: {props.year}</p>
+        <p>Model: {props.model} <br /> Year: {props.year}</p>
         <p><label>Destructuring ; </label>Model: {model} Year: {year}</p>
         <p>The car is {manufactureYear()} years old.</p>
       </div>
