@@ -36,15 +36,16 @@ const Car = (props) => {
   guess yr of manufacture*/
   const manufactureYear = () => {
     const yearNow = new Date().getFullYear()
-    return yearNow - props.year
-
-    /*Destructuring*/
-    const {model, year} = props
+    return yearNow - props.year 
   }
+
+  /*Destructuring*/
+    const {model, year} = props
   return (
     <>
       <div>
         <p>Model: {props.model} <br/> Year: {props.year}</p>
+        <p>Model: {model} Year: {year}</p>
         <p>The car is {manufactureYear()} years old.</p>
       </div>
     </>
