@@ -39,7 +39,7 @@ const Car = (props) => {
     return yearNow - props.year 
   }
 
-  /*Destructuring*/
+  //Destructuring
     const {model, year} = props
   return (
     <>
