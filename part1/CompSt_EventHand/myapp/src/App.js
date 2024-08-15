@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+//import './main'
 
 function App(props) {
   const model = "Lambo"
