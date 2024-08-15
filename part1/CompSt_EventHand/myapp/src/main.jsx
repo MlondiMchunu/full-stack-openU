@@ -15,7 +15,7 @@ let counter = 1
 const refresh = () => {
   ReactDOM.createRoot(document.getElementById('root')).render(
     <StrictMode>
-      <App counter={counter} />
+      <App counter = {counter} />
     </StrictMode>
   )
 }
