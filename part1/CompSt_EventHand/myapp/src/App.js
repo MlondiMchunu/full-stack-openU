@@ -30,7 +30,7 @@ function App(props) {
         <Car model={model} year={year} />
       </div>
       <div>
-        {counter}
+        Counter :{counter}
       </div>
     </div>
   );

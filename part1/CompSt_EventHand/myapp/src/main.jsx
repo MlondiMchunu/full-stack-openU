@@ -26,7 +26,7 @@ setInterval(() => {
   refresh()
   counter += 1
   refresh()
-}, 1000)
+}, 3000)
 
 
 
