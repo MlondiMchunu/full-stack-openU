@@ -12,30 +12,12 @@ import './index.css'
 
 //console.log(counter)
 
-let counter = 1
-
-const refresh = () => {
   ReactDOM.createRoot(document.getElementById('root')).render(
     <StrictMode>
-      <App counter={counter} />
+      <App/>
     </StrictMode>
   )
-}
 
-setInterval(() => {
-  refresh()
-  counter += 1
-}, 3000)
-
-setInterval(() => {
-  refresh()
-  counter += 1
-}, 3000)
-
-setInterval(() => {
-  refresh()
-  counter += 1
-}, 3000)
 
 
 
