@@ -7,8 +7,12 @@ const App = () => {
   const model = "Lambo"
   const year = 1970
 
-  const [counter, setCounter] = useState(0)
-  console.log('rendering with counter value ', counter)
+  //const [counter, setCounter] = useState(0)
+  //console.log('rendering with counter value ', counter)
+
+  //complex state, 2 pieces of state
+  const [left, setLeft] = useState(0)
+  const [right, setRight] = useState(0)
 
   //setTimeout(() => setCounter(counter + 1), 2000)//react re-renders the component when setCounter is called 
 
