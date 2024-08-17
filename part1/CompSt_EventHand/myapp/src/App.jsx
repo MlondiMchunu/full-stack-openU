@@ -8,8 +8,24 @@ const App = () => {
   const year = 1970
 
   const [counter, setCounter] = useState(0)
+  console.log('rendering with counter value ', counter)
 
-  setTimeout(() => setCounter(counter + 1), 2000)//react re-renders the component when setCounter is called 
+  //setTimeout(() => setCounter(counter + 1), 2000)//react re-renders the component when setCounter is called 
+
+  const addOne = () => {
+    console.log('increasing, value before ', counter)
+    setCounter(counter + 1)
+  }
+
+  const subOne = () => {
+    console.log('decreasing, value before ', counter)
+    setCounter(counter - 1)
+  }
+
+  const reset = () => {
+    console.log('resetting to zero, value before ', counter)
+    setCounter(0)
+  }
 
   console.log('rendering...', counter)
 
@@ -20,19 +36,8 @@ const App = () => {
   return (
     <>
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+        <header>
+
         </header>
 
         <div>
@@ -41,14 +46,43 @@ const App = () => {
           <Car model={model} year={year} />
         </div>
         <div>
+          <Display counter={counter} />
+        </div>
+        <div>
           -----------------------<br />
-          Counter : {counter}
+
+          <Button onClick={addOne} text='plus' />
+          <Button onClick={reset} text='zero' />
+          <Button onClick={subOne} text='minus' />
+
           <br />-----------------------
         </div>
       </div>
 
     </>
   );
+}
+
+const Display = (props) => {
+
+  return (
+    <>
+      <div>Counter : {props.counter}</div>
+    </>
+  )
+}
+
+const Button = (props) => {
+
+  return (
+    <>
+      <div>
+        <button onClick={props.onClick}>
+          {props.text}
+        </button>
+      </div>
+    </>
+  )
 }
 
 const Car = (props) => {
