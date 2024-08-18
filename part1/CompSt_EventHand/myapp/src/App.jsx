@@ -4,15 +4,13 @@ import { useState } from 'react'
 
 const App = () => {
 
+  /****
+   *----------------------------------------------------------------------
   const model = "Lambo"
   const year = 1970
 
   //const [counter, setCounter] = useState(0)
   //console.log('rendering with counter value ', counter)
-
-  //complex state, 2 pieces of state
-  const [left, setLeft] = useState(0)
-  const [right, setRight] = useState(0)
 
   //setTimeout(() => setCounter(counter + 1), 2000)//react re-renders the component when setCounter is called 
 
@@ -65,6 +63,124 @@ const App = () => {
 
     </>
   );
+  ----------------------------------------------
+  ****/
+
+  /*Two pieces of State */
+  const [left, setLeft] = useState(0)
+  const [right, setRight] = useState(0)
+
+  /*Keeping track of total number of button presses*/
+  const [total, setTotal] = useState(0)
+
+  /***Array of all clicks***/
+  const [allClicks, setAll] = useState([])
+
+  const handleLeftClick = () => {
+    setAll(allClicks.concat('L'))
+    const updatedLeft = left + 1
+    setLeft(updatedLeft)
+    setTotal(updatedLeft + right)
+  }
+
+  const handleRightClick = () => {
+    setAll(allClicks.concat('R'))
+    const updatedRight = right + 1
+    setRight(updatedRight)
+    setTotal(left + updatedRight)
+  }
+
+
+  /*Single piece of State*/
+
+  const [clicks, setClicks] = useState({
+    left: 0, right: 0
+  })
+
+  const handleLeftClicks = () => {
+    const newClicks = {
+      left: clicks.left + 1,
+      right: clicks.right
+    }
+    setClicks(newClicks)
+  }
+
+  const handleRightClicks = () => {
+    const newClicks = {
+      left: clicks.left,
+      right: clicks.right + 1
+    }
+    setClicks(newClicks)
+  }
+
+  //Defining an event handler by using a function that returns a function
+  const [value, setValue] = useState(12)
+
+  const setToValue = (newValue) => () => {
+    console.log('value now', newValue)
+    setValue(newValue)
+  }
+
+  return (
+    <div className='App'>
+      <div >
+        <p>  2 Pieces of State :</p>
+        {left}
+        <button onClick={() => { setLeft(left + 1) }}>left</button>
+        <button onClick={() => { setRight(right + 1) }}>right</button>
+        {right}<p></p>
+      </div>
+      <div >
+        Single Piece of State : <br />
+        <p>{clicks.left}
+          <button onClick={handleLeftClicks}>left</button>
+          <button onClick={handleRightClicks}>right</button>
+          {clicks.right}</p>
+      </div>
+      <div>
+        {left}
+        <Button handleClick={handleLeftClick} text='left' />
+        <Button handleClick={handleRightClick} text='right' />
+        {right}
+      </div>
+
+      <div>
+        Handling Arrays:
+        <p></p>
+        {left}
+        <button onClick={handleLeftClick}>left</button>
+        <button onClick={handleRightClick}>right</button>
+        {right}
+        <p>{allClicks.join(' ')}</p>
+        <p>total : {total}</p>
+      </div>
+      <History allClicks={allClicks} />
+
+      <div>
+        {value} <br/>
+        <button onClick={setToValue(1000)}>thousand</button>
+        <button onClick={setToValue(0)}>reset</button>
+        <button onClick={setToValue(value + 1)}>increment</button>
+
+
+      </div>
+    </div>
+  )
+}
+
+const History = (props) => {
+  if (props.allClicks.length === 0) {
+    return (
+      <div id='text'>
+        the app is used by pressing the buttons!
+      </div>
+    )
+  }
+  return (
+    <div>
+      button press history: {props.allClicks.join(' ')}
+    </div>
+  )
 }
 
 const Display = (props) => {
@@ -81,7 +197,7 @@ const Button = (props) => {
   return (
     <>
       <div>
-        <button onClick={props.onClick}>
+        <button onClick={props.handleClick}>
           {props.text}
         </button>
       </div>
