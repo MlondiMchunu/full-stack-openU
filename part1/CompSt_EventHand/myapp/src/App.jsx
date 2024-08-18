@@ -116,7 +116,7 @@ const App = () => {
   //Defining an event handler by using a function that returns a function
   const [value, setValue] = useState(12)
 
-  const setToValue = (newValue) => () => {
+  const setToValue = (newValue) => {
     console.log('value now', newValue)
     setValue(newValue)
   }
