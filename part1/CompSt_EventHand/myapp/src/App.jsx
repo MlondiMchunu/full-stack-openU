@@ -143,13 +143,6 @@ const App = () => {
         <Button handleClick={handleRightClick} text='right' />
         {right}
       </div>
-      <div>
-
-        {value + 1}
-        <Button handleClick={() => setToValue(100)} text="thou" />
-        <Button handleClick={() => setToValue(1)} text="reset" />
-        <Button handleClick={() => setToValue(value + 1)} text="increment" />
-      </div>
 
       <div>
         Handling Arrays:
@@ -171,6 +164,14 @@ const App = () => {
 
 
       </div>*/}
+
+<div>
+
+{value}
+<Button handleClick={() => setToValue(1000)} text="thousand" />
+<Button handleClick={() => setToValue(1)} text="reset" />
+<Button handleClick={() => setToValue(value + 1)} text="increment" />
+</div>
     </div>
   )
 }
