@@ -29,7 +29,7 @@ var fish = animals.filter(af);
 
 
 console.log(fish)
-console.log(otherFish)
+
 console.log(animals[3].name)
 console.log(af)
 
