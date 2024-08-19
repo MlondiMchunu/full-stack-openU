@@ -37,3 +37,10 @@ console.log(af)
 /*
 *2. Function: Map(), i.e getting the names of all the animals
 */
+
+var names =[]
+
+for(var i = 0;i<animals.length;i++){
+    names.push(animals[i])
+}
+console.log(names)
