@@ -35,5 +35,5 @@ console.log(af)
 
 
 /*
-*2. Function: Map()
+*2. Function: Map(), i.e getting the names of all the animals
 */
