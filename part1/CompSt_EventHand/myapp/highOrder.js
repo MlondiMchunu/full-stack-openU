@@ -46,7 +46,7 @@ for(var i = 0;i<animals.length;i++){
 }
 */
 
-const names = animals.map(function (animal) {
+const names = animals.map((animal)=> {
     return animal.name
 })
 
