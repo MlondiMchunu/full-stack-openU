@@ -47,7 +47,7 @@ for(var i = 0;i<animals.length;i++){
 */
 
 const names = animals.map(function(animal){
-    return animal.name + ' is a ' + animal.species
+    return animal.name 
 })
 
 console.log(names)
