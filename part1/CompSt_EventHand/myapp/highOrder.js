@@ -9,7 +9,7 @@ var animals = [
 
 
 /*
-*1. Function: Filter
+*1. Function: Filter()
 */ 
 /* METHOD 1
 var fish = animals.filter(function(animFish){
@@ -32,3 +32,8 @@ console.log(fish)
 console.log(otherFish)
 console.log(animals[3].name)
 console.log(af)
+
+
+/*
+*2. Function: Map()
+*/
