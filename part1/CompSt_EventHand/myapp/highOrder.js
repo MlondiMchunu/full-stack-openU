@@ -7,3 +7,8 @@ var animals = [
     {name:'Jimmy',species:'fish'}
 ]
 
+var dogs = animals.filter(function(anims){
+    return anims.species === 'fish'
+})
+
+console.log(dogs)
