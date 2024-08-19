@@ -22,7 +22,6 @@ var af = function(animFish){
 }
 
 var fish = animals.filter(af);
-var otherFish = animals.reject(af)
 
 
 console.log(fish)
