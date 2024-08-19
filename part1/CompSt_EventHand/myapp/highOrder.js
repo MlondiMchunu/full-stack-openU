@@ -46,8 +46,6 @@ for(var i = 0;i<animals.length;i++){
 }
 */
 
-const names = animals.map((animal)=> {
-    return animal.name
-})
+const names = animals.map((animal)=> animal.name)
 
 console.log(names)
