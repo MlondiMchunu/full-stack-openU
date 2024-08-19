@@ -7,6 +7,10 @@ var animals = [
     {name:'Jimmy',species:'fish'}
 ]
 
+
+/*
+*1. Function: Filter
+*/ 
 /* METHOD 1
 var fish = animals.filter(function(animFish){
     return animFish.species === 'fish'
