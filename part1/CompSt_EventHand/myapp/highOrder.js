@@ -8,7 +8,7 @@ var animals = [
 ]
 
 var fish = animals.filter(function(animFish){
-    return animFish.species == 'Fish'
+    return animFish.species === 'Fish'
 })
 
 console.log(fish)
