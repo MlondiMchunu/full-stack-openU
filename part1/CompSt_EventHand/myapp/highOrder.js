@@ -44,9 +44,10 @@ var names =[]
 for(var i = 0;i<animals.length;i++){
     names.push(animals[i].name)
 }
-console.log(names)
 */
 
 const names = animals.map(function(animal){
     return animal.name
 })
+
+console.log(names)
