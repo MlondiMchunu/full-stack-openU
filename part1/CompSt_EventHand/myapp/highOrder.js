@@ -12,3 +12,4 @@ var fish = animals.filter(function(animFish){
 })
 
 console.log(fish)
+console.log(animals[3].name)
