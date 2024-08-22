@@ -1,9 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
+import Note from './Note'
 
-const App = () => {
+const App = (props) => {
 
-  //const { notes } = props
+  const { note } = props
 
   const notes = [
     {

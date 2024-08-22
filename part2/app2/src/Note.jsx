@@ -1,6 +1,8 @@
-const Note = ({note})=>{
+
+const Note = (props)=>{
+    const {note} = props
     return(
-        <li>{note.conntent}</li>
+        <li>{note.content}</li>
     )
 }
 export default Note
