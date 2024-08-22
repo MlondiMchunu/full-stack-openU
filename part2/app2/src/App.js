@@ -38,9 +38,7 @@ const App = () => {
           <li>{notes[1].content}</li>
           <li>{notes[2].content}</li>*/}
             {notes.map((note) =>
-              <li key={note.id}>
-                {note.content}
-              </li>)}
+              <Note key={note.id} note={note}/>)}
           </ul>
         </div>
       </div>
