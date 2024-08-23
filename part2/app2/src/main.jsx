@@ -6,7 +6,7 @@ import './index.css'
 import App from './components/App'
 
 
-/*const notes = [
+const notes = [
     {
         id: 1,
         content: 'HTML is easy',
@@ -22,10 +22,8 @@ import App from './components/App'
         important: true
     }
 ]
-    */
+    
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <StrictMode>
-        <App notes={notes} />
-    </StrictMode>
+    <App notes={notes}/>
 )
