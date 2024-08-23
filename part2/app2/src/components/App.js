@@ -1,6 +1,7 @@
 import logo from '../logo.svg';
 import '../App.css';
 import Note from './Note'
+import {useState} from 'react'
 
 const App = (props) => {
 
@@ -26,6 +27,8 @@ const App = (props) => {
   const result = notes.map((note)=>note.content)
 
   console.log(result)
+
+  const [notes1, setNotes] = useState(props.notes)
 
   //console.log("Hello ", notes[1].content)
   return (
