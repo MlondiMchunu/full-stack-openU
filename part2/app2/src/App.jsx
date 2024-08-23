@@ -1,4 +1,5 @@
 import Note from './components/Note'
+//import './App.css'
 
 const App = ({ notes }) => {
   return (
