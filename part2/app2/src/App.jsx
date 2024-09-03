@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Note from './components/Note'
+import { response } from 'express'
 
 
 //import './App.css'
@@ -24,6 +25,15 @@ const App = () => {
   
 
 //effect hook code written differently
+const hook = ()=>{
+  console.log('effect')
+  axios
+    .get('http://localhost:3001/ntes')
+    .then(response=>{
+      setNotes(response.data)
+    })
+}
+
 
 
 
