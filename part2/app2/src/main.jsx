@@ -21,7 +21,7 @@ promise.then(response=>{
 //onst promise2 = axios.get('http://localhost:3001/foobar')
 //console.log(promise2)
 
-/*const notes = [
+const notes = [
   {
     id: 1,
     content: 'HTML is easy',
@@ -38,7 +38,7 @@ promise.then(response=>{
     important: true
   }
 ]
-  */
+  
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <App notes={notes} />
