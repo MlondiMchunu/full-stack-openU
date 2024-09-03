@@ -23,7 +23,9 @@ const App = () => {
   
 
 //effect hook code written differently
-
+const hook =()=>{
+  console.log('effect')
+}
 
   console.log('render',notes.length,'notes')
 
