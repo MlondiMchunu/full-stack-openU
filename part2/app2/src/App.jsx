@@ -4,9 +4,9 @@ import Note from './components/Note'
 
 //import './App.css'
 
-const App = (props) => {
+const App = () => {
 
-  const [notes, setNotes] = useState(props.notes)
+  const [notes, setNotes] = useState([])
   const [newNote, setNewNote] = useState('')
   const [showAll, setShowAll] = useState(true)
 
