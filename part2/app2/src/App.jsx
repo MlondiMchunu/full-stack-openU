@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Note from './components/Note'
-import { response } from 'express'
+
 //import './App.css'
 
 const App = (props) => {
