@@ -32,6 +32,8 @@ const hook =()=>{
     })
 }
 
+//first parameter; the effect itself 
+//2nd parameter; how often the effect is run
 useEffect(hook,[])
 
   console.log('render',notes.length,'notes')
