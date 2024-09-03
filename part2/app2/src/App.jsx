@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Note from './components/Note'
-import { response } from 'express'
-
 
 //import './App.css'
 
@@ -34,8 +32,7 @@ const hook = ()=>{
     })
 }
 
-
-
+useEffect(hook,[])
 
   console.log('render',notes.length,'notes')
 
