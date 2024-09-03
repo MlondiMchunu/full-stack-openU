@@ -25,6 +25,8 @@ const App = () => {
 //effect hook code written differently
 const hook =()=>{
   console.log('effect')
+  axios
+    .get('http://localhost:3001/notes')
 }
 
   console.log('render',notes.length,'notes')
