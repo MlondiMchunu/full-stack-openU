@@ -10,13 +10,13 @@ promise.then(response=>{
   console.log(response)
 })*/
 
-axios
+/*axios
   .get('http://localhost:3001/notes')
   .then(response=>{
   const notes = response.data
   //console.log(notes)
   ReactDOM.createRoot(document.getElementById('root')).render(<App notes={notes}/>)
-})
+})*/
 
 //onst promise2 = axios.get('http://localhost:3001/foobar')
 //console.log(promise2)
