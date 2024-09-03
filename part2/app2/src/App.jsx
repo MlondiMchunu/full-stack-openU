@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Note from './components/Note'
+import { response } from 'express'
 
 //import './App.css'
 
@@ -10,7 +11,7 @@ const App = () => {
   const [newNote, setNewNote] = useState('')
   const [showAll, setShowAll] = useState(true)
 
-  useEffect(()=>{
+  /*useEffect(()=>{
     console.log('effect')
     axios
     .get('http://localhost:3001/notes')
@@ -19,6 +20,13 @@ const App = () => {
       setNotes(response.data)
     })
   },[])
+  */
+  
+
+//effect hook code written differently
+
+
+
 
   console.log('render',notes.length,'notes')
 
