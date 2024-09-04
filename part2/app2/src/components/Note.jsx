@@ -1,4 +1,4 @@
-const Note = ({ note }) => {
+const Note = ({ note, toggleImportance }) => {
     return (
       <li>{note.content}</li>
     )

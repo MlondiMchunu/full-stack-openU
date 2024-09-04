@@ -89,6 +89,11 @@
       "id": "decf",
       "content": "Hello Javascript programming",
       "important": false
+    },
+    {
+      "id": "7030",
+      "content": "Im only here to kick ass and chew gum",
+      "important": true
     }
   ]
 }
