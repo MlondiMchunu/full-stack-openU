@@ -38,7 +38,7 @@ useEffect(hook,[])
 
   console.log('render',notes.length,'notes')
 
-   addNote = (event) => {
+   const addNote = (event) => {
     event.preventDefault()
     const noteObject = {
       content: newNote,
@@ -48,6 +48,14 @@ useEffect(hook,[])
     //console.log('button clicked', event.target)
     setNotes(notes.concat(noteObject))
     setNewNote('')
+  }
+
+  addNote =(event)=>{
+    event.preventDefault()
+    const noteObject = {
+      content: newNote,
+      important: Math.random() < 0.5,
+    }
   }
 
   const handleNoteChange = (event) => {
