@@ -20,25 +20,25 @@ const App = () => {
     })
   },[])
   */
-  
 
-//effect hook code written differently
-const hook =()=>{
-  console.log('effect')
-  axios
-    .get('http://localhost:3001/notes')
-    .then(response => {
-      setNotes(response.data)
-    })
-}
 
-//first parameter; the effect itself 
-//2nd parameter; how often the effect is run
-useEffect(hook,[])
+  //effect hook code written differently
+  const hook = () => {
+    console.log('effect')
+    axios
+      .get('http://localhost:3001/notes')
+      .then(response => {
+        setNotes(response.data)
+      })
+  }
 
-  console.log('render',notes.length,'notes')
+  //first parameter; the effect itself 
+  //2nd parameter; how often the effect is run
+  useEffect(hook, [])
 
-   const addNote = (event) => {
+  console.log('render', notes.length, 'notes')
+
+  /*const addNote = (event) => {
     event.preventDefault()
     const noteObject = {
       content: newNote,
@@ -48,13 +48,22 @@ useEffect(hook,[])
     //console.log('button clicked', event.target)
     setNotes(notes.concat(noteObject))
     setNewNote('')
-  }
+  }*/
 
-  addNote =(event)=>{
+  const addNote = (event) => {
     event.preventDefault()
     const noteObject = {
       content: newNote,
       important: Math.random() < 0.5,
+    }
+    if (noteObject.content == '') {
+      console.log("This is an empty note!")
+    } else {
+      axios
+        .post('http://localhost:3001/notes', noteObject)
+        .then(response => {
+          console.log(response)
+        })
     }
   }
 
@@ -65,13 +74,13 @@ useEffect(hook,[])
 
   const notesToShow = showAll
     ? notes
-    : notes.filter(note=>note.important === true)
+    : notes.filter(note => note.important === true)
 
   return (
     <div>
       <h1>Notes</h1>
       <div>
-        <button onClick={()=>setShowAll(!showAll)}>
+        <button onClick={() => setShowAll(!showAll)}>
           show {showAll ? 'important' : 'all'}
         </button>
       </div>
@@ -81,7 +90,7 @@ useEffect(hook,[])
         )}
       </ul>
       <form onSubmit={addNote}>
-        <input value={newNote} onChange={handleNoteChange}/>
+        <input value={newNote} onChange={handleNoteChange} />
         <button type="submit">save</button>
       </form>
     </div>
