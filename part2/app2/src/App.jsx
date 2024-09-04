@@ -10,6 +10,10 @@ const App = () => {
   const [newNote, setNewNote] = useState('')
   const [showAll, setShowAll] = useState(true)
 
+  const toggleImportance = (id)=>{
+    console.log('importance of '+ id +' needs to be toggled')
+  }
+
   /*useEffect(()=>{
     console.log('effect')
     axios
