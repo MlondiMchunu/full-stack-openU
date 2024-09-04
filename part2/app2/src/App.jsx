@@ -10,7 +10,7 @@ const App = () => {
   const [newNote, setNewNote] = useState('')
   const [showAll, setShowAll] = useState(true)
 
-  const toggleImportance = (id)=>{
+  const toggleImportanceOf = (id)=>{
     console.log('importance of '+ id +' needs to be toggled')
   }
 
@@ -93,7 +93,9 @@ const App = () => {
       </div>
       <ul>
         {notesToShow.map(note =>
-          <Note key={note.id} note={note} />
+          <Note key={note.id} 
+                note={note}
+                toggleImportance={()=> toggleImportanceOf(note.id)} />
         )}
       </ul>
       <form onSubmit={addNote}>
