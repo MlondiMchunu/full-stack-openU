@@ -147,9 +147,33 @@ const App = () => {
     ? notes
     : notes.filter(note => note.important === true)
 
-  const handleLogin = (event)=>{
+  const handleLogin = async(event)=>{
     event.preventDefault()
     console.log('logging in with', username, password)
+
+    try{
+      const user = await loginService.login({
+        username, password
+      })
+    }catch(exception){
+      setErrorMessage('Wrong credentials')
+      setTimeout(()=>{
+        setErrorMessage(null)
+      },5000)
+    }
+  }
+
+  const loginForm = ()=>{
+    <form onSubmit={handleLogin}>
+      <div>
+        username
+          <input
+            type="text"
+            value={username}
+            name="Username"
+            onChange={({target})=> setUsername(target.value)}/>
+      </div>
+    </form>
   }
 
   return (
