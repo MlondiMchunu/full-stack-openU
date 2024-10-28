@@ -198,8 +198,11 @@ const App = () => {
       <h1>Notes</h1>
       <Notification message={errorMessage}/>
 
-      {user === null && loginForm()}
-      {user !== null && noteForm()}
+      {/*React tricks to render forms conditionally
+      //{user === null && loginForm()}
+      //{user !== null && noteForm()} */}
+
+      {user === null ? loginForm() : noteForm()}
       <div>
         <button onClick={() => setShowAll(!showAll)}>
           show {showAll ? 'important' : 'all'}
