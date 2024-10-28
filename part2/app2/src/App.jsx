@@ -185,6 +185,14 @@ const App = () => {
     </form>
   }
 
+  const noteForm = ()=>(
+    <form onSubmit={addNote}>
+      <input
+       value = {newNote}
+       onChange={handleNoteChange}/>
+    </form>
+  )
+
   return (
     <div>
       <h1>Notes</h1>
