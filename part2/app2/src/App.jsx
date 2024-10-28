@@ -178,6 +178,7 @@ const App = () => {
            type = "password"
            value={password} name="Password" onChange={({target})=> setPassword(target.value)}/>
         </div>
+        <button type="submit">login</button>
       </form>
       <form onSubmit={addNote}>
         <input value={newNote} onChange={handleNoteChange} />
