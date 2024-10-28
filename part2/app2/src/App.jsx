@@ -25,8 +25,8 @@ const App = () => {
   const [newNote, setNewNote] = useState('')
   const [showAll, setShowAll] = useState(true)
   const [errorMessage,setErrorMessage] = useState(null)
-  const [username, setUsername] = useState('')
-  const [password, setPassword] = useState('')
+  const [username , setUsername] = useState('')
+  const [password , setPassword] = useState('')
   
 
    /*useEffect(()=>{
@@ -167,14 +167,14 @@ const App = () => {
       </ul>
       <form onSubmit={handleLogin}>
         <div>
-          username 
+          username : 
            <input type="text" value={username} 
                   name="Username" onChange={({target})=>setUsername(target.value)} />
         </div>
         <div>
-          password
+          password : 
            <input 
-           type = "pawword"
+           type = "password"
            value={password} name="Password" onChange={({target})=> setPassword(target.value)}/>
         </div>
       </form>
