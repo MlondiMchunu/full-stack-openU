@@ -2,23 +2,10 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Note from './components/Note'
 import loginService from './services/login'
-
 import noteService from './services/notes'
+import Notification from './components/Notification'
+import Footer from './components/Footer'
 //import './App.css'
-
-const Footer =()=>{
-  const footerStyle ={
-    color: 'green',
-    fontStyle: 'italic',
-    fontSize: 16
-  }
-  return(
-    <div style={footerStyle}>
-      <br/>
-      <em>Note app, Department of Computer Science, University of Helsinki 2024</em>
-    </div>
-  )
-}
 
 const App = () => {
 
@@ -202,7 +189,12 @@ const App = () => {
       //{user === null && loginForm()}
       //{user !== null && noteForm()} */}
 
-      {user === null ? loginForm() : noteForm()}
+      {user === null ? 
+      loginForm() : 
+        <div> 
+           <p>{user.name} logged-in </p>
+        {noteForm()}
+        </div>}
       <div>
         <button onClick={() => setShowAll(!showAll)}>
           show {showAll ? 'important' : 'all'}
