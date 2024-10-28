@@ -165,6 +165,13 @@ const App = () => {
             toggleImportance={() => toggleImportanceOf(note.id)} />
         )}
       </ul>
+      <form onSubmit={handleLogin}>
+        <div>
+          username 
+           <input type="text" value={username} 
+                  name="Username" onChange={({target})=>setUsername(target.value)}></input>
+        </>
+      </form>
       <form onSubmit={addNote}>
         <input value={newNote} onChange={handleNoteChange} />
         <button type="submit">save</button>
