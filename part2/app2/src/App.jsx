@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
 import Note from './components/Note'
+import loginService from './services/login'
 
 import noteService from './services/notes'
 //import './App.css'
@@ -27,6 +28,7 @@ const App = () => {
   const [errorMessage,setErrorMessage] = useState(null)
   const [username , setUsername] = useState('')
   const [password , setPassword] = useState('')
+  const [user, setUser] = useState(null)
   
 
    /*useEffect(()=>{
