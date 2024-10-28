@@ -26,6 +26,7 @@ const App = () => {
   const [showAll, setShowAll] = useState(true)
   const [errorMessage,setErrorMessage] = useState(null)
   const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
   
 
    /*useEffect(()=>{
